@@ -1,5 +1,5 @@
 * [ ] Box
-* [ ] Row/Col
+* [x] Row/Col
 - [x] ScreenClassRenderer/Media
 * [x] VisuallyHidden
 * [x] ConditionalWrap
@@ -12,11 +12,13 @@
 * react
 * styled-components
 * lodash
+* antd
 
 ## Grid
 
-* [Ant Design Grid](https://ant.design/components/grid)
+* Proxy for [Ant Design Grid](https://ant.design/components/grid)
 * Limitation: The breakpoints of responsive grid follow [BootStrap 4 media queries rules](https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints)
+* Requires rendering exported `<GridStyles />`
 
 ## Vertical Spacing
 
