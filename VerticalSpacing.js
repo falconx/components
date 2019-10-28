@@ -9,7 +9,7 @@ const VerticalSpacing = styled.div`
 `;
 
 VerticalSpacing.propTypes = {
-  size: PropTypes.number.isRequired,
+  size: PropTypes.number.isRequired
 }
 
 export default VerticalSpacing;

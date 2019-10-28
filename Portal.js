@@ -22,11 +22,11 @@ const Portal = props => {
 Portal.propTypes = {
   // query selector to determine where to mount the Portal
   selector: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 
 Portal.defaultProps = {
-  selector: 'body',
+  selector: 'body'
 };
 
 export default Portal;
