@@ -74,6 +74,8 @@ Consequently, code readability should be improved since a developer isn't requir
 | overflowX      | "visible"\|"hidden"\|"scroll"\|"auto"                                             | CSS `overflow-x`
 | overflowY      | "visible"\|"hidden"\|"scroll"\|"auto"                                             | CSS `overflow-y`
 
+\*Due to the frequency that `Box` is used, the most common props have been shorthanded.
+
 ## Grid
 
 Acts as a proxy for [Ant Design Grid](https://ant.design/components/grid).
