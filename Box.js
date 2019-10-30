@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-// influenced heavily by https://github.com/Monar/react-styled-box
+// heavily influenced by https://github.com/Monar/react-styled-box
 
 const toCss = (props, propTypes, propsMap) => {
   return Object.keys(propTypes)
