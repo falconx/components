@@ -22,6 +22,7 @@
 * Extension of https://hankchizljaw.com/wrote/a-modern-css-reset
 * Reset all heading tags to separate semantic and aesthetic concerns
 * Set `min-height` on `:root` and `body` to make it easier to position a footer at the bottom of the page
+* Avoid anchor and button styling when a class has been applied, allowing them to be used interchangeably
 
 ## Box
 

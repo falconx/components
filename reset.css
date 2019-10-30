@@ -51,6 +51,22 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+/* Remove hyperlink styles on a elements with a class attribute */
+a[class] {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove button styles on button elements with a class attribute */
+button[class] {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 /* Make images easier to work with */
 img {
   max-width: 100%;
