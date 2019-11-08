@@ -6,12 +6,12 @@ import debounce from 'lodash/debounce';
 
 // ideally stored in theme configuration
 const BREAKPOINTS = {
-  xs: '@media screen and (max-width: 575px',
-  sm: '@media screen and (min-width: 576px',
-  md: '@media screen and (min-width: 768px',
-  lg: '@media screen and (min-width: 992px',
-  xl: '@media screen and (min-width: 1200px',
-  xxl: '@media screen and (min-width: 1600px'
+  xs: '@media screen and (max-width: 575px)',
+  sm: '@media screen and (min-width: 576px)',
+  md: '@media screen and (min-width: 768px)',
+  lg: '@media screen and (min-width: 992px)',
+  xl: '@media screen and (min-width: 1200px)',
+  xxl: '@media screen and (min-width: 1600px)'
 };
 
 const { Provider, Consumer } = React.createContext();
