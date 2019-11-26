@@ -145,13 +145,13 @@ const propTypes = {
     'hidden',
     'scroll',
     'auto'
-  ),
+  ]),
   overflowY: PropTypes.oneOf([
     'visible',
     'hidden',
     'scroll',
     'auto'
-  )
+  ])
 };
 
 const Box = styled.div`
