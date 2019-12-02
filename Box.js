@@ -37,7 +37,7 @@ const flexValidator = validator => {
         return null;
       }
 
-      if (props['display'] !== 'flex' && props['display'] !== 'inline-flex') {
+      if (props['d'] !== 'flex' && props['d'] !== 'inline-flex') {
         return new Error(`The property "${propName}" in ${componentName} is available only when is display={/flex|inline-flex/}.`);
       }
 
@@ -145,13 +145,13 @@ const propTypes = {
     'hidden',
     'scroll',
     'auto'
-  ),
+  ]),
   overflowY: PropTypes.oneOf([
     'visible',
     'hidden',
     'scroll',
     'auto'
-  )
+  ])
 };
 
 const Box = styled.div`
