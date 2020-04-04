@@ -17,6 +17,12 @@
 * [Spacer](#spacer)
 * [Button](#button)
 
+### Useful Accessibility Resources
+
+* https://www.w3.org/TR/wai-aria-1.1
+* https://www.w3.org/TR/2019/NOTE-wai-aria-practices-1.1-20190814/examples
+* https://www.w3.org/TR/2019/NOTE-wai-aria-practices-1.1-20190814/examples/landmarks
+
 ## CSS Reset
 
 * Extension of https://hankchizljaw.com/wrote/a-modern-css-reset
