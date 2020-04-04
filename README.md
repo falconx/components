@@ -14,7 +14,7 @@
 * [Visually Hidden](#visually-hidden)
 * [Conditional Wrap](#conditional-wrap)
 * [Portal](#portal)
-* [Vertical Spacing](#vertical-spacing)
+* [Spacer](#spacer)
 * [Button](#button)
 
 ## CSS Reset
@@ -225,7 +225,7 @@ const showContent = React.useState(false);
 |-----------|----------|-------------------------------------------------|
 | selector  | String   | Selector to determine where to mount the Portal |
 
-## Vertical Spacing
+## Spacer
 
 * [Handling spacing in a UI component library](https://medium.com/fed-or-dead/handling-spacing-in-a-ui-component-library-70f3b22ec89)
 
