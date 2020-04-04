@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const SPACING_UNITS = 10;
 
 const Spacer = styled.div`
-  margin-bottom: ${props => props.size * SPACING_UNITS}px;
+  height: ${props => props.size * SPACING_UNITS}px;
 `;
 
 Spacer.propTypes = {
