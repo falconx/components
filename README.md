@@ -10,7 +10,6 @@
 * [CSS Reset](#css-reset)
 * [Box](#box)
 * [Grid](#grid)
-* [Media](#media)
 * [Visually Hidden](#visually-hidden)
 * [Conditional Wrap](#conditional-wrap)
 * [Portal](#portal)
@@ -108,63 +107,6 @@ Acts as a proxy for [Ant Design Grid](https://ant.design/components/grid).
 ```
 
 Ensure you render the exported `<GridStyles />` into your application.
-
-## Media
-
-Like [Grid](#grid), `Media` is another layout component but handles the scenarios where you don't simply need to rearrange content but actually render different content or components based on the size of the viewport.
-
-### Limitations
-
-* The breakpoints should be hardcoded to match the [Grid](#grid).
-
-### Usage
-
-Take the following hypothetical example where on desktop we have a stack of cards but have choosen to instead render a carousel on mobile:
-
-```JSX
-<BreakpointProvider>
-  <Media>
-    {mq => mq.lt('md') ? (
-      <Carousel />
-    ) : (
-      <CardList>
-        <Card />
-        <Card />
-        <Card />
-      </CardList>
-    )}
-  </Media>
-</BreakpointProvider>
-```
-
-### API
-
-| Prop     | PropType | Description                                                                 |
-|----------|----------|-----------------------------------------------------------------------------|
-| children | Fn!      | Render prop with an instance of the `Breakpoint` class as the only argument |
-
-#### Breakpoint Class
-
-```js
-const BREAKPOINTS = {
-  xs: '@media screen and (max-width: 575px',
-  sm: '@media screen and (min-width: 576px',
-  md: '@media screen and (min-width: 768px',
-  lg: '@media screen and (min-width: 992px',
-  xl: '@media screen and (min-width: 1200px',
-  xxl: '@media screen and (min-width: 1600px'
-};
-```
-
-| Method   | Return Value     | Description
-|----------|------------------|------------
-| getIndex | BREAKPOINT_INDEX | Returns the current breakpoint index
-| lt       | Bool             | `true` if the viewport is _less than_ the passed BREAKPOINT_INDEX
-| gt       | Bool             | `true` if the viewport is _greater than_ the passed BREAKPOINT_INDEX
-| lte      | Bool             | `true` if the viewport is _less than or equal to_ the passed BREAKPOINT_INDEX
-| gte      | Bool             | `true` if the viewport is _greater than or equal to_ the passed BREAKPOINT_INDEX
-
-\*BREAKPOINT_INDEX = "xs" | "sm" | "md" | "lg" | "xl" | "xxl"
 
 ## Visually Hidden
 
