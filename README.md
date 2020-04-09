@@ -8,6 +8,7 @@
 ## Index
 
 * [CSS Reset](#css-reset)
+* [Heading](#heading)
 * [Box](#box)
 * [Grid](#grid)
 * [Visually Hidden](#visually-hidden)
@@ -29,6 +30,20 @@
 * Reset all heading tags to separate semantic and aesthetic concerns
 * Set `min-height` on `:root` and `body` to make it easier to position a footer at the bottom of the page
 * Avoid anchor and button styling when a class has been applied, allowing them to be used interchangeably
+
+## Heading
+
+* [Managing Heading Levels In Design Systems](https://medium.com/@Heydon/managing-heading-levels-in-design-systems-18be9a746fa3)
+
+### Usage
+
+```JSX
+<H>Level 2</H>
+<H>Sibling Level 2</H>
+<Section>
+  <H>Level 3</H>
+</Section>
+```
 
 ## Box
 
