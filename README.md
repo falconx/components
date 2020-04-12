@@ -273,7 +273,7 @@ Most of the focus management happens automagically however, you should be famili
 
 Extracted from https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role#Focus_management
 
-#### Furter Reading
+#### Further Reading
 
 * https://www.w3.org/TR/wai-aria-1.1/#aria-modal
 * https://www.w3.org/TR/2019/NOTE-wai-aria-practices-1.1-20190814/examples/dialog-modal/dialog.html
