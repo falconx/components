@@ -214,17 +214,12 @@ Much of the credit for this component is thanks to [Inclusive Components](http:/
 ```JSX
 const App = () => {
   const [showModal, setShowModal] = useState(false);
-  const triggerRef = useRef();
 
   return (
     <>
-      <button
-        ref={triggerRef}
-        type="button"
-        onClick={() => setShowModal(true)}
-      >
+      <Button onClick={() => setShowModal(true)}>
         Open Modal
-      </button>
+      </Button>
 
       <Modal
         id="modal-1"
