@@ -1,9 +1,16 @@
+There's no such thing as a one-size-fits-all component library and you'll notice `Components` isn't a package you can depend on.
+
+`Components` is intended to act as a framework which you can use and modify to meet the requirements of your project.
+
+* Minimal CSS
+* SSR compatible (server-side rendering)
+* Accessible
+
 ## Dependencies
 
 * [react](https://reactjs.org)
 * [styled-components](https://www.styled-components.com)
 * [lodash](https://lodash.com)
-* [antd/grid](https://ant.design/components/grid)
 
 ## Index
 
@@ -100,6 +107,10 @@ Consequently, code readability should be improved since a developer isn't requir
 ## Grid
 
 Acts as a proxy for [Ant Design Grid](https://ant.design/components/grid).
+
+### Dependencies
+
+* [antd/grid](https://ant.design/components/grid)
 
 ### Limitations
 
