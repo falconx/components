@@ -212,8 +212,6 @@ A dialog is a type of modal window that appears in front of app content to provi
 
 Dialogs are purposefully interruptive, so they should be used sparingly.
 
-Much of the credit for this component is thanks to [Inclusive Components](http://book.inclusive-components.design).
-
 ### Usage
 
 ```JSX
