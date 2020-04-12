@@ -274,6 +274,7 @@ Extracted from https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/R
 ### Dependencies
 
 * [inert](https://github.com/WICG/inert) — Similar to setting `aria-hidden="true"` but takes care of disabling each element from both mouse and keyboard interactions.
+* [body-scroll-lock](https://github.com/willmcpo/body-scroll-lock)
 * [Portal](#portal)
 * [Heading](#heading)
 

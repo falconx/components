@@ -6,6 +6,8 @@ import 'wicg-inert';
 import Portal from './Portal';
 import H from './Heading';
 
+import useBodyScrollLock from './hooks/useBodyScrollLock';
+
 const KEY_ESCAPE = 27;
 
 const Content = styled.div`
@@ -18,6 +20,7 @@ const Modal = ({ id, show, actions, onClose, ...props }) => {
   const previousFocus = useRef(null);
   const dialogRef = useRef(null);
   const autoFocusActionRef = useRef(null);
+  const contentRef = useBodyScrollLock(show);
 
   const rootNodes = document.querySelectorAll("body > *");
 
@@ -75,7 +78,9 @@ const Modal = ({ id, show, actions, onClose, ...props }) => {
         >
           <H id={id}>{props.title}</H>
 
-          <Content>{props.children}</Content>
+          <Content ref={contentRef}>
+            {props.children}
+          </Content>
 
           <div>
             {actions.map(({ fragment, autoFocus }, index) => {
