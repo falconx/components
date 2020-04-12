@@ -6,13 +6,13 @@ There's no such thing as a one-size-fits-all component library and you'll notice
 * SSR compatible (server-side rendering)
 * Accessible
 
-## Dependencies
+## Common Dependencies
 
 * [react](https://reactjs.org)
 * [styled-components](https://www.styled-components.com)
 * [lodash](https://lodash.com)
 
-## Index
+## Table of Contents
 
 * [CSS Reset](#css-reset)
 * [Heading](#heading)
@@ -25,7 +25,7 @@ There's no such thing as a one-size-fits-all component library and you'll notice
 * [Spacer](#spacer)
 * [Button](#button)
 
-### Useful Accessibility Resources
+## Useful Accessibility Resources
 
 * https://www.w3.org/TR/wai-aria-1.1
 * https://www.w3.org/TR/2019/NOTE-wai-aria-practices-1.1-20190814/examples
