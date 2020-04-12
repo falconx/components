@@ -21,6 +21,7 @@ There's no such thing as a one-size-fits-all component library and you'll notice
 * [Visually Hidden](#visually-hidden)
 * [Conditional Wrap](#conditional-wrap)
 * [Portal](#portal)
+* [Modal Dialog](#modal-dialog)
 * [Spacer](#spacer)
 * [Button](#button)
 
@@ -171,9 +172,9 @@ In this scenario the content would be wrapped inside a modal, but only for mobil
 ### API
 
 | Prop      | PropType  | Description
-|-----------|-----------|-----------------------------------------------------------------------------------------|
-| condition | Bool!     | The condition to pass for `children` to be wrapped.                                     |
-| wrap      | Fn!       | Render prop with `children` as the only argument. Invoked when the `condition` is true. |
+|-----------|-----------|----------------------------------------------------------------------------------------|
+| condition | Bool!     | The condition to pass for `children` to be wrapped                                     |
+| wrap      | Fn!       | Render prop with `children` as the only argument. Invoked when the `condition` is true |
 
 ## Portal
 
@@ -199,6 +200,91 @@ const showContent = React.useState(false);
 | Prop      | PropType | Description
 |-----------|----------|-------------------------------------------------|
 | selector  | String   | Selector to determine where to mount the Portal |
+
+## Modal Dialog
+
+A dialog is a type of modal window that appears in front of app content to provide critical information or ask for a decision. Dialogs disable all app functionality when they appear, and remain on screen until confirmed, dismissed, or a required action has been taken.
+
+Dialogs are purposefully interruptive, so they should be used sparingly.
+
+Much of the credit for this component is thanks to [Inclusive Components](http://book.inclusive-components.design).
+
+### Usage
+
+```JSX
+const App = () => {
+  const [showModal, setShowModal] = useState(false);
+  const triggerRef = useRef();
+
+  return (
+    <>
+      <button
+        ref={triggerRef}
+        type="button"
+        onClick={() => setShowModal(true)}
+      >
+        Open Modal
+      </button>
+
+      <Modal
+        id="modal-1"
+        title="Modal Title"
+        show={showModal}
+        actions={[
+          { fragment: <Button>Cancel</Button> },
+          { fragment: <Button>OK</Button>, autoFocus: true },
+        ]}
+        onClose={() => setShowModal(false)}
+      >
+        Modal content goes here!
+      </Modal>
+    </>
+  );
+}
+```
+
+### API
+
+| Prop      | PropType         | Description
+|-----------|------------------|--------------------------------------------------------------------|
+| id        | String!          | GUID, not randomly generated to ensure it matches SSR              |
+| title     | String\|Element! | Modal title                                                        |
+| onClose   | Fn!              | Confirm and cancel callback                                        |
+| actions   | [Action]!        | Collection of actions to render. Must contain one "confirm" action |
+| show      | Bool             | Determines if the modal is visible                                 |
+
+#### Action API
+
+| Prop      | PropType | Description
+|-----------|----------|----------------------------------------------------------------------------|
+| fragment  | Element! | The button element to render                                               |
+| autoFocus | Bool     | Auto focuses the action upon opening the modal. See "Managing Focus" below |
+
+### Accessibility
+
+ARIA 1.1 introduces `aria-modal="true"` — once this is well supported, we should drop the custom inert handling.
+
+#### Managing focus
+
+Most of the focus management happens automagically however, you should be familiar with the following:
+
+* Dialogs should always have at least one focusable control. For many dialogs, there will be a button like "Close", "OK" or "Cancel". In addition to the needed control, dialogs can contain any number of focusable elements, even entire forms or other container widgets like tabs.
+* When the dialog appears on the screen, keyboard focus (whose control depends upon the dialogs purpose) should be moved to the default focusable control inside the dialog. For dialogs that only provide a basic message, it could be an "OK" button. For dialogs containing a form it could be the first field in the form.
+
+Extracted from https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role#Focus_management
+
+#### Furter Reading
+
+* https://www.w3.org/TR/wai-aria-1.1/#aria-modal
+* https://www.w3.org/TR/2019/NOTE-wai-aria-practices-1.1-20190814/examples/dialog-modal/dialog.html
+* https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role
+
+### Dependencies
+
+* [inert](https://github.com/WICG/inert) — Similar to setting `aria-hidden="true"` but takes care of disabling each element from both mouse and keyboard interactions.
+* [body-scroll-lock](https://github.com/willmcpo/body-scroll-lock)
+* [Portal](#portal)
+* [Heading](#heading)
 
 ## Spacer
 
