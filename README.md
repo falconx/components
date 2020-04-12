@@ -16,6 +16,7 @@ There's no such thing as a one-size-fits-all component library and you'll notice
 
 * [CSS Reset](#css-reset)
 * [Heading](#heading)
+* [Section](#section)
 * [Box](#box)
 * [Grid](#grid)
 * [Visually Hidden](#visually-hidden)
@@ -52,6 +53,10 @@ There's no such thing as a one-size-fits-all component library and you'll notice
   <H>Level 3</H>
 </Section>
 ```
+
+## Section
+
+Increments the heading level context value — see [Heading](#heading).
 
 ## Box
 
