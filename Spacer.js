@@ -1,15 +1,21 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { system, compose, space } from 'styled-system';
+import { propType } from '@styled-system/prop-types';
 
-// ideally stored in theme configuration
-const SPACING_UNITS = 10;
+const size = system({
+  size: {
+    property: 'margin',
+    scale: 'space',
+    defaultScale: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  }
+})
 
 const Spacer = styled.div`
-  height: ${props => props.size * SPACING_UNITS}px;
+  ${compose(space, size)}
 `;
 
 Spacer.propTypes = {
-  size: PropTypes.number.isRequired
-}
+  size: propType.isRequired
+};
 
 export default Spacer;
