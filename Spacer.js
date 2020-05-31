@@ -4,9 +4,9 @@ import { propType } from '@styled-system/prop-types';
 
 const size = system({
   size: {
-    property: 'margin',
+    property: 'margin-top',
     scale: 'space',
-    defaultScale: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    defaultScale: [0, 4, 8, 16, 32, 64, 128]
   }
 })
 
