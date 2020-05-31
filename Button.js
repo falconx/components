@@ -1,7 +1,5 @@
-import styled from 'styled-components';
+import React from 'react';
 
-const Button = styled.button.attrs({
-  type: 'button'
-})``;
+const Button = props => <button type="button" {...props} />;
 
 export default Button;

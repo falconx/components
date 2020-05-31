@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { compose, space, color, layout, flexbox } from 'styled-system';
 import { createPropTypes } from '@styled-system/prop-types';
 
