@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { system, compose, space } from 'styled-system';
+import { system } from 'styled-system';
 import { propType } from '@styled-system/prop-types';
 
 const size = system({
@@ -11,7 +11,7 @@ const size = system({
 })
 
 const Spacer = styled.div`
-  ${compose(space, size)}
+  ${size}
 `;
 
 Spacer.propTypes = {
