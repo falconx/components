@@ -117,7 +117,7 @@ Modal.propTypes = {
       autoFocus: PropTypes.bool
     })
   ).isRequired,
-  onClose: PropTypes.func,
+  onClose: PropTypes.func.isRequired,
   show: PropTypes.bool
 };
 
