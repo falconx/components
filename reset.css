@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: 1px dotted currentColor;
+  outline-offset: 0.5rem;
+}
+
 /* Remove default padding */
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 
@@ -17,8 +22,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -40,17 +45,25 @@ body {
   line-height: 1.5;
 }
 
-/* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
   list-style: none;
 }
 
 /* Have link and buttons be indistinguishable */
 a,
 button {
-  all: unset;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
 }
 
 /* Make images easier to work with */
