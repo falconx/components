@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 import { compose, space, color, layout, flexbox } from 'styled-system';
 import { createPropTypes } from '@styled-system/prop-types';
+import shouldForwardProp from '@styled-system/should-forward-prop';
 
 // https://styled-system.com/guides/build-a-box
-const Box = styled.div`
+const Box = styled('div', { shouldForwardProp })`
   ${compose(
     space,
     color,
