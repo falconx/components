@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-                                                                                                                                                                                                                                                                                                                                                            
+
 const VisuallyHidden = styled.div`
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
